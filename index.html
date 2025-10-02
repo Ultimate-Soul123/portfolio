@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personnal Porfolio Website HTML only CSS</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.boxicons.com/fonts/basic/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background-color: #010a11;
+        color: aliceblue;
+      }
+
+      .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px 10%;
+        background: transparent;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+        background-color: #010a11;
+      }
+
+      .logo {
+        font-size: 25px;
+        color: aliceblue;
+        font-weight: 500;
+        text-decoration: none;
+      }
+
+      .navbar a {
+        font-size: 18px;
+        color: aliceblue;
+        text-decoration: none;
+        font-weight: 500;
+        margin-left: 35px;
+        transition: 0.5s;
+        letter-spacing: 1px;
+      }
+
+      .navbar a:hover,
+      .navbar a.active {
+        color: #00abf0;
+      }
+
+      .home {
+        padding: 0 10%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        background-image: url("download (3).jpeg");
+      }
+
+      .home-content {
+        max-width: 600px;
+        font-weight: bolder;
+      }
+      .home-content h1 {
+        font-size: 56px;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+      .home-content h3 {
+        font-size: 32px;
+        font-weight: 700;
+        color: #00abf0;
+      }
+      .home-content p {
+        font-size: 16px;
+        margin: 20px 0 40px;
+      }
+      .home-content .btn-box {
+        width: 345px;
+        justify-content: space-between;
+        display: flex;
+        height: 50px;
+      }
+      .btn-box a {
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 100%;
+        border: 2px solid #00abf0;
+        border-radius: 8px;
+        font-size: 19px;
+        color: #081b29;
+        text-decoration: none;
+        font-weight: bolder;
+        letter-spacing: 1px;
+        z-index: 1;
+        overflow: hidden;
+        transition: 0.5s;
+      }
+      .btn-box a {
+        color: #00abf0;
+      }
+      .btn-box a:hover {
+        color: #00abf0;
+        transform: translateY(-10px);
+        transition: 0.1s;
+      }
+      .btn-box a:hover::before {
+        width: 100%;
+      }
+      .stats {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        padding: 40px 0;
+      }
+      .stat {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .stat h2 {
+        font-size: 50px;
+        color: #00abf0;
+        font-weight: bolder;
+      }
+      .stat p {
+        font-size: 10px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        margin-top: 10px;
+        color: aliceblue;
+      }
+      .hero-section {
+        display: flex;
+        justify-content: center;
+        padding: 20px 10%;
+        align-content: space-between;
+      }
+      .hero-image {
+        text-align: center;
+        display: flex;
+      }
+      .hero-image img {
+        height: 150px;
+        width: 150px;
+        border-radius: 20px;
+        margin-bottom: 10px;
+        margin-right: 100px;
+        border-radius: 100%;
+        border: 3px solid #023a50;
+        background-color: aliceblue;
+      }
+      .hero-image p {
+        text-align: left;
+        margin-left: 150px;
+        font-size: 10px;
+      }
+      .hero-btn {
+        position: absolute;
+        margin-top: 190px;
+        margin-left: 30px;
+        padding: 10px 20px;
+        font-size: 14px;
+        color: #00abf0;
+        background-color: #081b29;
+        border: 3px solid #00abf0;
+        border-radius: 10px;
+        font-weight: bolder;
+        overflow: hidden;
+        transition: 0.3s;
+      }
+      .hero-btn:hover {
+        transform: translateY(-10px);
+        color: #00abf0;
+      }
+      .hero-btn a {
+        text-decoration: none;
+        color: #00abf0;
+      }
+      .hero-text {
+        position: absolute;
+        margin-top: 150px;
+        margin-left: -10px;
+        padding: 10px 20px;
+        font-size: 14px;
+        color: #00abf0;
+        font-weight: bolder;
+      }
+      .experiences {
+        padding: 50px 10%;
+        background-color: #010a11;
+        margin-top: 100px;
+      }
+      .experiences-title {
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 20px;
+        font-weight: bold;
+        color: #00abf0;
+        letter-spacing: 1px;
+      }
+      .experience-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);;
+        gap: 20px;
+      }
+      .experience-card {
+        display: flex;
+        gap: 20px;
+        background: #081b29;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+        flex-direction: column;
+      }
+      .experience-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(247, 244, 244, 0.2);
+      }
+      .experience-card img {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 15px;
+        border-radius: 10px;
+      }
+      .contact {
+        padding: 50px 10%;
+        background-color: #010a11;
+        margin-top: 100px;
+      }
+      .contact-title {
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 20px;
+        font-weight: bold;
+        color: #00abf0;
+        letter-spacing: 1px;
+      }
+      .contact p {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      .contact-info {
+        text-align: center;
+      }
+      .contact-info input,
+      .contact-info textarea {
+        width: 50%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 2px solid #00abf0;
+        border-radius: 5px;
+        font-size: 16px;
+        color: #081b29;
+      }
+      .contact-info input::placeholder,
+      .contact-info textarea::placeholder {
+        color: #081b29;
+      }
+      .contact-btn {
+        padding: 10px 20px;
+        font-size: 16px;
+        color: #00abf0;
+        background-color: #081b29;
+        border: 2px solid #00abf0;
+        border-radius: 5px;
+        font-weight: bolder;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+      .contact-btn:hover {
+        color: #00abf0;
+        transform: translateY(-10px);
+      }
+      .footer {
+        text-align: center;
+        padding: 20px 0;
+        background-color: #081b29;
+        color: #00abf0;
+        margin-top: 50px;
+      }
+      .footer p {
+        margin: 0;
+        font-size: 14px;
+      }
+      @media  (min-width: 312px) and (max-width: 768px) {
+        .experience-grid {
+          grid-template-columns: 1fr;
+        }
+        .hero-section {
+          flex-direction: column;
+          align-items: center;
+        }
+        .hero-image img {
+          margin-right: 0;
+          margin-bottom: 20px;
+        }
+        .hero-image p {
+          margin-left: 0;
+          text-align: center;
+        }
+        .hero-btn {
+          position: absolute;
+          margin-top: 190px;
+        }
+        .hero-text {
+          position: absolute;
+          margin-top: 150px;
+         
+        }
+        .contact-info input,
+        .contact-info textarea {
+          width: 100%;
+        }
+        
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <a href="" class="logo">James.</a>
+
+      <nav class="navbar">
+        <a href="#" class="active">About</a>
+        <a href="#experiences">My skill</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="home">
+      <div class="home-content">
+        <h1>I'm James Akinnifesi</h1>
+        <h3>I'm a Front-end Web developer</h3>
+        <p>
+          I am a passionate Front-End Web Developer skilled in creating
+          responsive, user-friendly, and visually appealing websites. I enjoy
+          turning ideas into functional designs using HTML, CSS, and JavaScript,
+          with a growing interest in full-stack development. My goal is to build
+          modern web solutions that improve usability and help organizations
+          grow.
+        </p>
+        <div class="btn-box">
+          <a href="mailto:feyisolaakinnifesi@gmail.com">Hire me</a>
+          <a href="#">Let's Talk</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="stats">
+      <div class="stat">
+        <h2>20</h2>
+        <p>Years of <br />Age</p>
+      </div>
+      <div class="stat">
+        <h2>1</h2>
+        <p>Years of <br />Experience</p>
+      </div>
+      <div class="stat">
+        <h2>1</h2>
+        <p>Projects <br />Worked On</p>
+      </div>
+    </div>
+
+    <div class="hero-section">
+      <div class="hero-image">
+        <img src="james edited version.png" alt="Hero Image" />
+        <div class="hero-text">Frontend | HTML | CSS</div>
+        <button class="hero-btn"><a href="https://github.com/Ultimate-Soul123">GitHub</a></button>
+        <p>
+          💻 I'm a Frontend Web Developer passionate about turning ideas <br />
+          into clean, responsive, and user-friendly websites. <br /><br />
+
+          ✨ From building modern landing pages to crafting full portfolio or
+          <br />business sites, my goal is to create designs that don’t just
+          look good <br />but also work seamlessly across all devices.
+          <br /><br />
+
+          ⚡ I believe websites should feel smooth, intuitive, and engaging
+          <br />
+          — that’s the standard I bring to every project. <br /><br />
+
+          🛠️ I work with HTML and CSS to create visually appealing, <br />
+          functional, and mobile-friendly websites that bring your vision to
+          life.
+        </p>
+      </div>
+    </div>
+
+    <section class="experiences" id="experiences">
+      <h2 class="experiences-title">Other Skills🛠️</h2>
+
+      <div class="experience-grid">
+        <div class="experience-card">
+          <img src="html5 logo.jpeg" alt="HTML5" />
+          <div>
+            <h3>HTML5</h3>
+            <p>
+              HTML5 is the backbone of web development, used to structure and
+              display content on the web. It introduces semantic elements like
+              "header", "article", and "footer" for cleaner code. HTML5 also
+              supports multimedia with "audio" and "video" without needing
+              plugins. It ensures accessibility, SEO-friendliness, and better
+              browser compatibility.
+            </p>
+          </div>
+        </div>
+
+        <div class="experience-card">
+          <img src="css3 logo.jpeg" alt="CSS3" />
+          <div>
+            <h3>CSS3</h3>
+            <p>
+              CSS3 is used for styling and designing web pages, controlling
+              layout, colors, and typography. It brings powerful features like
+              flexbox, grid, and media queries for responsive design. CSS3 also
+              supports transitions, animations, and shadows to enhance user
+              experience. With it, developers can create visually appealing and
+              consistent interfaces across devices.
+            </p>
+          </div>
+        </div>
+
+        <div class="experience-card">
+          <img src="bootstrap logo.jpeg" alt="Bootstrap" />
+          <div>
+            <h3>Bootstrap</h3>
+            <p>
+              Bootstrap is a popular CSS framework that speeds up responsive web
+              design. It provides prebuilt components like navbars, buttons,
+              grids, and modals. Developers use Bootstrap to create mobile-first
+              layouts quickly and efficiently. It ensures consistency across
+              projects while reducing the need to write CSS from scratch.
+            </p>
+          </div>
+        </div>
+
+        <div class="experience-card">
+          <img src="tailwind css logo.jpeg" alt="Taliwind CSS" />
+          <div>
+            <h3>Tailwind CSS</h3>
+            <p>
+              Tailwind CSS is a utility-first CSS framework that offers
+              flexibility and customization. Instead of using predefined
+              components, it provides utility classes for building designs. It
+              promotes clean, scalable, and reusable code by avoiding deep
+              custom CSS. Tailwind makes it faster to prototype and maintain
+              modern, responsive websites.
+            </p>
+          </div>
+        </div>
+
+        <div class="experience-card">
+          <img src="git hub logo.jpeg" alt="Git & Github" />
+          <div>
+            <h3>Git & GitHub</h3>
+            <p>
+              Git is a version control system that helps track changes in code
+              over time. GitHub is a platform for hosting Git repositories and
+              collaborating with others. They allow multiple developers to work
+              on the same project without conflicts. Using Git and GitHub
+              improves teamwork, backup, and deployment processes.
+            </p>
+          </div>
+        </div>
+
+        <div class="experience-card">
+          <img src="responsive design.jpeg" alt="Responsive Design" />
+          <div>
+            <h3>Responsive Design</h3>
+            <p>
+              Responsive design ensures websites adapt smoothly to different
+              screen sizes and devices. It uses techniques like fluid grids,
+              flexible images, and media queries. This approach improves user
+              experience by keeping layouts consistent on phones, tablets, and
+              desktops. Responsive design is essential for accessibility, SEO
+              ranking, and modern web standards.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="contact-title">Let's Talk</div>
+      <p>
+        What led you here? What are you looking for? I would love to hear from
+        you!
+      </p>
+
+      <div class="contact-info">
+        <input type="text" name="" id="" placeholder="Your name" /> <br /><br />
+        <input type="email" name="" id="" placeholder="Your email" />
+        <br /><br />
+        <textarea
+          name=""
+          id=""
+          cols="30"
+          rows="10"
+          placeholder="Your message"
+        ></textarea
+        ><br /><br />
+        <button class="contact-btn">Send Message</button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>© 2024 James Akinnifesi. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
