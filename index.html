@@ -503,29 +503,28 @@
       </div>
     </section>
 
-    <section class="contact" id="contact">
-      <div class="contact-title">Let's Talk</div>
-      <p>
-        What led you here? What are you looking for? I would love to hear from
-        you!
-      </p>
-      <form
-        id="contactForm"
-        action="https://formspree.io/f/xgvnyrko"
-        method="POST"
-      >
-        <div class="contact-info">
-          <input type="text" name="" id="" placeholder="Your name" />
-          <br /><br />
-          <input type="email" name="" id="" placeholder="Your email" />
-          <br /><br />
-          <textarea name="" id="" cols="30" rows="10" placeholder="Your message"></textarea
-          ><br /><br />
-          <button class="contact-btn">Send message</button>
-        </div>
-        <p id="formMessage"></p>
-      </form>
-    </section>
+   <section class="contact" id="contact">
+<div class="contact-title">Let's Talk</div>
+<p>
+What led you here? What are you looking for? I would love to hear from you!
+</p>
+<form
+id="contactForm"
+action="https://formspree.io/f/xgvnyrko"
+method="POST"
+>
+<div class="contact-info">
+<input type="text" name="name" placeholder="Your name" required />
+<br /><br />
+<input type="email" name="email" placeholder="Your email" required />
+<br /><br />
+<textarea name="message" cols="30" rows="10" placeholder="Your message" required></textarea>
+<br /><br />
+<button type="submit" class="contact-btn">Send message</button>
+</div>
+<p id="formMessage"></p>
+</form>
+</section>
 
     <footer class="footer">
       <p>© 2024 James Akinnifesi. All rights reserved.</p>
